@@ -1,0 +1,18 @@
+[submodule "1-merge-with-no-fast-forward-example"]
+	path = 1-merge-with-no-fast-forward-example
+	url = https://github.com/magento-meetup-6/1-merge-with-no-fast-forward-example.git
+[submodule "2-rebase-merge-with-fast-forward-example"]
+	path = 2-rebase-merge-with-fast-forward-example
+	url = https://github.com/magento-meetup-6/2-rebase-merge-with-fast-forward-example
+[submodule "3-rebase-using-onto-example"]
+	path = 3-rebase-using-onto-example
+	url = https://github.com/magento-meetup-6/3-rebase-using-onto-example
+[submodule "4-rebase-interactive-mode-example"]
+	path = 4-rebase-interactive-mode-example
+	url = https://github.com/magento-meetup-6/4-rebase-interactive-mode-example
+[submodule "5-revert-commit-example"]
+	path = 5-revert-commit-example
+	url = https://github.com/magento-meetup-6/5-revert-commit-example
+[submodule "6-reset-simple-example"]
+	path = 6-reset-simple-example
+	url = https://github.com/magento-meetup-6/6-reset-simple-example
