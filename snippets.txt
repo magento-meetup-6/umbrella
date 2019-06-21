@@ -1,0 +1,88 @@
+###### 1 ######
+cd 1-merge-with-no-fast-forward-example/
+git log --oneline --graph --all
+git merge feature/some-feature
+git log --oneline --graph --all
+cd ../
+clear
+
+###### 2 ######
+cd 2-rebase-merge-with-fast-forward-example/
+git log --oneline --graph --all
+git checkout feature/some-feature
+git rebase master
+git log --oneline --graph --all
+git checkout master
+git merge feature/some-feature
+git log --oneline --graph --all
+cd ../
+clear
+
+###### 3 ######
+cd 3-rebase-using-onto-example
+git log --oneline --graph --all
+git checkout feature/featureB-test
+git rebase feature/featureB feature/featureB-test --onto master
+git log --oneline --graph --all
+cd ../
+clear
+
+###### 4 ######
+cd 4-rebase-interactive-mode-example/
+git log --oneline --graph --all
+git rebase HEAD~5 -i
+#manualy edit rebase process
+nano amend.txt
+#edit file
+git add amend.txt
+git commit --amend
+git rebase --continue
+git log --oneline --graph --all
+cd ../
+clear
+
+###### 5 ######
+cd 7-revert-commit-example
+git log --oneline --graph --all
+#revert simple commit
+git revert 2e78914
+git log --oneline --graph --all
+#use git show to check the content of new commit
+
+#revert commit with conflicts
+git revert 0f4db90
+nano hello.txt
+#manually resolve conflicts
+git add hello.txt
+git revert --continue
+git log --oneline --graph --all
+#use git show to check the content of new commit
+
+#revert merge commit
+git revert 43ae1cd -m 1
+git log --oneline --graph --all
+#use git show to check the content of new commit
+cd ../
+clear
+
+###### 6 ######
+cd 6-reset-simple-example
+git log --oneline --graph --all
+git status
+git diff --staged
+git diff
+#reset indexed changes
+git reset HEAD reset.txt
+git status
+git diff
+git add .
+git reset HEAD~3 --soft
+git log --oneline --graph --all
+git add reset.txt
+git commit -m “4567”
+git reset HEAD~3 --hard
+git log --oneline --graph --all
+git status
+cd ../
+clear
+
